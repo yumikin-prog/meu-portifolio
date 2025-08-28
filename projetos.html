@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Projetos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #6a0dad; /* roxo */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #d1b3ff;
+    }
+
+    /* Área de projetos */
+    .projetos {
+      display: flex;
+      flex-direction: column; /* vertical */
+      align-items: center;    /* centraliza */
+      gap: 30px;              /* espaço entre cards */
+      padding: 40px 20px;
+    }
+
+    .projeto {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .projeto:hover {
+      transform: scale(1.03);
+    }
+
+    .projeto h2 {
+      color: #4b0082;
+      margin-bottom: 10px;
+    }
+
+    .projeto p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .projeto a {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #4b0082;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .projeto a:hover {
+      background-color: #6a0dad;
+    }
+
+    /* Botão voltar ao topo */
+    #btnTopo {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #6a0dad;
+      color: white;
+      cursor: pointer;
+      padding: 12px 15px;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    #btnTopo:hover {
+      background-color: #4b0082;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #6a0dad;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Yasmim.dev</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre Mim</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+  <h1>🚀 Meus Projetos</h1>
+  <p>Aqui estão alguns dos meus trabalhos publicados no GitHub</p>
+</header>
+
+<h2>Meus Projetos</h2>
+<ul>
+  <li><a href="https://yumikin-prog.github.io/dashboard-vendas/" target="_blank">Dashboard</a></li>
+  <li><a href="https://yumikin-prog.github.io/landing-page1/" target="_blank">Landing Page</a></li>
+  <li><a href="https://yumikin-prog.github.io/App-de-vendas-/" target="_blank">App de Vendas</a></li>
+</ul>
+
+<!-- Botão Voltar ao Topo -->
+<button onclick="topFunction()" id="btnTopo" title="Voltar ao topo">⬆</button>
+
+<script>
+  // Mostra botão ao rolar
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    const btn = document.getElementById("btnTopo");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  }
+
+  // Volta ao topo
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<footer>
+  <p>© 2025 - Meu Portfólio</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App de Tarefas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #6a0dad;
+      color: white;
+      padding: 20px;
+    }
+    h1 { margin: 0; }
+    .todo-container {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 400px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #6a0dad;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    ul { list-style: none; padding: 0; }
+    li { padding: 8px; border-bottom: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📱 App de Tarefas</h1>
+    <p>Exemplo simples de lista de tarefas</p>
+  </header>
+
+  <main>
+    <div class="todo-container">
+      <h2>Minhas Tarefas</h2>
+      <input type="text" id="novaTarefa" placeholder="Digite uma tarefa">
+      <button onclick="adicionarTarefa()">Adicionar</button>
+      <ul id="listaTarefas"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Projeto fictício - App de Tarefas | Desenvolvido por Yasmim</p>
+  </footer>
+
+  <script>
+    function adicionarTarefa() {
+      const input = document.getElementById("novaTarefa");
+      const tarefa = input.value.trim();
+      if (tarefa !== "") {
+        const li = document.createElement("li");
+        li.textContent = tarefa;
+        document.getElementById("listaTarefas").appendChild(li);
+        input.value = "";
+      }
+    }
+  </script>
+</body>
+</html>
